@@ -1,0 +1,206 @@
+/* Fondo pergamino */
+body {
+  font-family: "Dancing Script", cursive;
+  background: #f8f3e5 url("https://www.transparenttextures.com/patterns/aged-paper.png");
+  color: #3a2e23;
+  margin: 0;
+  padding: 24px;
+  background-size: cover;
+}
+
+/* Título manuscrito */
+h1 {
+  text-align: center;
+  margin: 0 0 20px;
+  font-size: 40px;
+  font-family: "Great Vibes", cursive;
+  color: #2a1d14;
+  text-shadow: 1px 1px 0 #fff5d9, 2px 2px 6px rgba(0,0,0,.2);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjetas */
+.card {
+  background: #fdf7e3 url("https://www.transparenttextures.com/patterns/old-wall.png");
+  border: 1px solid #c2b59a;
+  border-radius: 4px;
+  box-shadow: inset 0 0 40px rgba(0,0,0,.15), 0 6px 16px rgba(0,0,0,.25);
+  padding: 14px;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: scale(1.02) rotate(-1deg);
+  box-shadow: inset 0 0 50px rgba(0,0,0,.2), 0 10px 20px rgba(0,0,0,.3);
+}
+
+/* Imagen portada dentro de thumb */
+.card .thumb {
+  height: 160px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5ecd8;
+  border: 1px solid #cbbf9f;
+  margin-bottom: 8px;
+}
+.card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Texto dentro de carta */
+.card .title {
+  font-size: 22px;
+  font-family: "Great Vibes", cursive;
+  margin-bottom: 6px;
+  color: #2a1d14;
+}
+.card .date {
+  font-size: 14px;
+  color: #5a4631;
+  margin-bottom: 10px;
+}
+.card .excerpt {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: "Dancing Script", cursive;
+  color: #3d2f20;
+  white-space: pre-wrap;
+  max-height: 4.5em;
+  overflow: hidden;
+  position: relative;
+}
+.card .excerpt::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  height: 1.5em;
+  background: linear-gradient(to top, #fdf7e3, transparent);
+}
+
+/* Botones estilo carta */
+.btn {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  padding: 6px 16px;
+  border: 1px solid #a69374;
+  background: #efe3c6;
+  color: #2a1d14;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background .2s ease, transform .1s ease;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+}
+.btn:hover {
+  background: #e4d3a9;
+  transform: scale(1.05);
+}
+.btn-light {
+  background: #f6ecd2;
+}
+.btn-dark {
+  background: #5a4631;
+  color: #fff;
+  border: 1px solid #4b3a27;
+}
+.btn-dark:hover {
+  background: #3e2f1f;
+}
+
+/* Modal carta */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.modal.show { display: flex; }
+.modal-card {
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fbf2dc url("https://www.transparenttextures.com/patterns/aged-paper.png");
+  border-radius: 6px;
+  border: 1px solid #d2c4a8;
+  box-shadow: inset 0 0 60px rgba(0,0,0,.25), 0 12px 28px rgba(0,0,0,.45);
+  padding: 20px;
+  font-family: "Dancing Script", cursive;
+  color: #2a1d14;
+}
+
+/* Encabezado modal */
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-head h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 30px;
+}
+.icon-btn {
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  cursor: pointer;
+  color: #4a3f33;
+  font-family: "Great Vibes", cursive;
+}
+
+/* Texto poema centrado */
+.poem-text {
+  white-space: pre-wrap;
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: center;
+  max-height: 50vh;
+  overflow-y: auto;
+  margin: 20px 0;
+}
+
+/* Imagen en modal */
+.modal-photo {
+  width: 220px;
+  height: 220px;
+  margin: 10px auto;
+  display: block;
+  object-fit: cover;
+  filter: sepia(.6) contrast(.9) brightness(.95);
+  border: 3px solid #b9a786;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,.3);
+}
+
+/* Player Spotify */
+.player iframe {
+  width: 100%;
+  height: 152px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+/* Acciones modal */
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.hidden { display: none; }

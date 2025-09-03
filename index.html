@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Poemario</title>
+  <!-- Fuentes manuscritas -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Mi Poemario</h1>
+
+  <div id="poemGrid" class="grid"></div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="modalTitle"></h2>
+        <button id="modalClose" class="icon-btn" aria-label="Cerrar">❧</button>
+      </div>
+      <p id="modalDate" class="date"></p>
+
+      <img id="modalImage" class="photo-old modal-photo" src="" alt="Imagen del poema" />
+
+      <article id="modalContent" class="poem-text"></article>
+
+      <div id="modalPlayer" class="player"></div>
+
+      <div class="modal-actions">
+        <button id="btnVolver" class="btn btn-light">✦ Cerrar</button>
+        <a id="btnSpotify" class="btn btn-dark" href="#" target="_blank" rel="noopener">♪ Abrir en Spotify</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
