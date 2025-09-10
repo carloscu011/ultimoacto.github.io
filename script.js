@@ -1,7 +1,6 @@
-// FOTO MANUAL (fallback)
+
 const FOTO_MANUAL = "https://i.ibb.co/8gq8wMm8/IMG-0081.jpg";
 
-// --- Poemas (Grande B transplantados a la estructura de A) ---
 const poems = [
   {
     id: 'queMeGustaTi',
